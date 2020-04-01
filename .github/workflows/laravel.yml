@@ -35,4 +35,4 @@ jobs:
     - name: Execute CodeSniffer
       run: composer sniff
     - name: Laravel PHP Insights Action
-      uses: stefanzweifel/laravel-phpinsights-action@v1.1.1
+      run: php artisan insights
