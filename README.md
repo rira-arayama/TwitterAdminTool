@@ -1,9 +1,8 @@
-# Laravel Sandbox
+# TwitterAdminTool
 
 ## What
 
-Laravel 6.x LTS のデバッグやコード解析を導入した Sandbox  
-快適に開発をスタートできるようにするために作成
+## Features
 
 ## Install & How to use
 
@@ -19,16 +18,6 @@ Laravel 6.x LTS のデバッグやコード解析を導入した Sandbox
 
 -   `php artisan migrate`
 
--   開発を始めましょう
-
--   `composer stan` または `./vendor/bin/phpstan analyse`で Larastan を用いた静的解析を実行できます。
-
--   `composer sniff` または `./vendor/bin/phpcs .`で codesniffer を用いたコーディング規約のチェックを行います。
-
--   `git checkout features/admin` から 管理者画面を簡単に導入ができるので必要な場合はマージします。
-
--   `php artisan generate:model-factory --dir app/Models -- モデル名` factory を自動生成します。
-
 ## Installed Package
 
 -   IDE Helper : Laravel で IDE 補完機能を有効にする
@@ -42,3 +31,11 @@ Laravel 6.x LTS のデバッグやコード解析を導入した Sandbox
 -   debugbar : 画面にデバッグ用の表示を行う
 
 -   laravel-test-factory-helper : モデルから簡単にファクトリーを作成する
+
+-   `composer unit` または `./vendor/bin/phpunit`で PHPUnit を用いた単体テストを行います。
+
+-   `composer stan` または `./vendor/bin/phpstan analyse`で Larastan を用いた静的解析を実行できます。
+
+-   `composer sniff` または `./vendor/bin/phpcs .`で codesniffer を用いたコーディング規約のチェックを行います。
+
+-   `php artisan generate:model-factory --dir app/Models -- モデル名` factory を自動生成します。
