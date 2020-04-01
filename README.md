@@ -32,6 +32,8 @@
 
 -   laravel-test-factory-helper : モデルから簡単にファクトリーを作成する
 
+-   `php artisan insights` で PHP Insights を用いたコード品質を分析する
+
 -   `composer unit` または `./vendor/bin/phpunit`で PHPUnit を用いた単体テストを行います。
 
 -   `composer stan` または `./vendor/bin/phpstan analyse`で Larastan を用いた静的解析を実行できます。
