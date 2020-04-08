@@ -18,7 +18,7 @@ class CreateTasksTable extends Migration
             $table->unsignedBigInteger('user_id');
             $table->unsignedBigInteger('type_id');
             $table->unsignedBigInteger('option_id');
-            $table->boolean('is_enable')->default(true)->comment('有効かどうか');
+            $table->boolean('is_enable')->default()->comment('有効かどうか');
             $table->timestamps();
         });
     }
