@@ -15,11 +15,12 @@ class CreateUsersTable extends Migration
     {
         Schema::create('users', function (Blueprint $table) {
             $table->bigIncrements('id');
-            $table->string('name');
-            $table->string('email')->unique();
-            $table->timestamp('email_verified_at')->nullable();
-            $table->string('password');
-            $table->rememberToken();
+            $table->unsignedBigInteger('account_id')->index()->comment('TwitterUserID');
+            $table->string('name', 50)->comment('アカウント名');
+            $table->string('screen_name', 50)->comment('表示名');
+            $table->string('avatar_path', 256)->comment('アバターパス');
+            $table->string('access_token', 255)->comment('アクセストークン');
+            $table->string('access_token_secret', 255)->comment('アクセストークンシークレット');
             $table->timestamps();
         });
     }
