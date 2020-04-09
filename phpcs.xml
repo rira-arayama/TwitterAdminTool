@@ -7,7 +7,6 @@
     <file>../laravel/config</file>
     <file>../laravel/resources</file>
     <file>../laravel/routes</file>
-    <file>../laravel/tests</file>
 
     <!-- 除外したいファイル、ディレクトリ -->
     <exclude-pattern>*/database/*</exclude-pattern>
@@ -23,6 +22,7 @@
     <exclude-pattern>*/node_modules/*</exclude-pattern>
     <exclude-pattern>*/migrations/*</exclude-pattern>
     <exclude-pattern>*/public/*</exclude-pattern>
+    <exclude-pattern>*/tests/*</exclude-pattern>
     <exclude-pattern>_ide_helper.php</exclude-pattern>
 
     <!-- PSR2をベースとする -->
