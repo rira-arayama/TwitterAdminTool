@@ -20,7 +20,8 @@ use Illuminate\Support\Str;
 $factory->define(User::class, function (Faker $faker) {
     return [
         'account_id' => random_int(10000000, 9999999999999),
-        'name' => $faker->name,
+        'name' =>  $faker->name,
+        'screen_name' =>  $faker->name,
         'avatar_path' => $faker->url,
         'access_token' => Str::random(40),
         'access_token_secret' => Str::random(50)

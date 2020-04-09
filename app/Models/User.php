@@ -25,7 +25,7 @@ class User extends Authenticatable
      */
     public function setAccessTokenAttribute(string $access_token)
     {
-        $this->attributes['access_token'] = bcrypt($access_token);
+        $this->attributes['access_token'] = encrypt($access_token);
     }
 
     /**
@@ -44,7 +44,7 @@ class User extends Authenticatable
      */
     public function setAccessTokenSecretAttribute(string $access_token_secret)
     {
-        $this->attributes['access_token_secret'] = bcrypt($access_token_secret);
+        $this->attributes['access_token_secret'] = encrypt($access_token_secret);
     }
 
     /**
