@@ -11,7 +11,7 @@
         <hr class="sidebar-divider my-0">
         <ul class="nav navbar-nav text-light" id="accordionSidebar">
             <li class="nav-item" role="presentation">
-                <a class="nav-link {{ request()->is('') ? 'active' : '' }}" href="#">
+                <a class="nav-link {{ request()->is('dashboard') ? 'active' : '' }}" href="{{ route('dashboard') }}">
                     <i class="fas fa-home"></i>
                     <span>Dashboard</span>
                 </a>

@@ -16,24 +16,44 @@ class User extends Authenticatable
      * @var array
      */
     protected $fillable = [
-        'name', 'email', 'password',
+        'account_id', 'name', 'screen_name', 'avatar_path', 'access_token', 'access_token_secret'
     ];
 
     /**
-     * The attributes that should be hidden for arrays.
-     *
-     * @var array
+     * 暗号化してトークンを保存
+     * @param  string  $access_token
      */
-    protected $hidden = [
-        'password', 'remember_token',
-    ];
+    public function setAccessTokenAttribute(string $access_token)
+    {
+        $this->attributes['access_token'] = bcrypt($access_token);
+    }
 
     /**
-     * The attributes that should be cast to native types.
-     *
-     * @var array
+     * 復号化してトークン返却
+     * @param string $access_token
+     * @return string
      */
-    protected $casts = [
-        'email_verified_at' => 'datetime',
-    ];
+    public function getAccessTokenAttribute(string $access_token)
+    {
+        return decrypt($access_token);
+    }
+
+    /**
+     * 暗号化してトークンを保存
+     * @param  string  $access_token_secret
+     */
+    public function setAccessTokenSecretAttribute(string $access_token_secret)
+    {
+        $this->attributes['access_token_secret'] = bcrypt($access_token_secret);
+    }
+
+    /**
+     * 復号化してトークン返却
+     * @param string $access_token_secret
+     * @return string
+     */
+    public function getAccessTokenSecretAttribute(string $access_token_secret)
+    {
+        return decrypt($access_token_secret);
+    }
 }
